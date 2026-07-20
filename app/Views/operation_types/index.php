@@ -19,7 +19,7 @@
         <?php endif; ?>
 
         <div class="mb-3">
-            <a href="/" class="btn btn-outline-primary"><i class="fas fa-home"></i> Accueil</a>
+            <a href="/log_admin" class="btn btn-outline-primary"><i class="fas fa-home"></i> Accueil</a>
             <a href="/operation-types/create" class="btn btn-primary">+ Ajouter un type d'opération</a>
             <a href="/operators" class="btn btn-outline-secondary"><i class="fas fa-building"></i> Gestion des préfixes</a>
         </div>

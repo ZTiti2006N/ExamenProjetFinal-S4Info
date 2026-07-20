@@ -248,7 +248,7 @@
             </div>
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/">
+                    <a class="nav-link active" href="/log_admin">
                         <i class="fas fa-chart-pie"></i> Tableau de bord
                     </a>
                 </li>
@@ -515,15 +515,18 @@
         <?php
         $typeLabels2 = [];
         $typeCounts2 = [];
+        $hasOperations = false;
         foreach ($operationTypes as $ot) {
-            $cnt = $ot['op_count'];
-            if ($cnt > 0 || count($operationTypes) <= 3) {
-                $typeLabels2[] = esc($ot['label']);
-                $typeCounts2[] = $cnt > 0 ? $cnt : 1;
+            $cnt = (int)$ot['op_count'];
+            if ($cnt > 0) {
+                $hasOperations = true;
             }
+            $typeLabels2[] = esc($ot['label']);
+            $typeCounts2[] = $cnt;
         }
+        // Si aucune opération, on affiche les types avec 0
         if (empty($typeLabels2)) {
-            $typeLabels2 = ['En attente'];
+            $typeLabels2 = ['Aucune opération'];
             $typeCounts2 = [1];
         }
         ?>
@@ -546,6 +549,15 @@
                     legend: {
                         position: 'bottom',
                         labels: { padding: 12, usePointStyle: true, font: { size: 11 } }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                let value = context.parsed || 0;
+                                return label + ': ' + value + ' opération(s)';
+                            }
+                        }
                     }
                 }
             }

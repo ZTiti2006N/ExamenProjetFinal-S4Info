@@ -20,7 +20,7 @@
         <?php endif; ?>
 
         <div class="mb-3">
-            <a href="/" class="btn btn-outline-primary"><i class="fas fa-home"></i> Accueil</a>
+            <a href="/log_admin" class="btn btn-outline-primary"><i class="fas fa-home"></i> Accueil</a>
             <a href="/operators/create" class="btn btn-primary">+ Ajouter un opérateur</a>
         </div>
 

@@ -9,7 +9,26 @@ $routes->group('reports', function ($routes) {
     $routes->get('accounts-summary',  'Reports::accountsSummary');
 });
 
-$routes->get('/', 'Home::index');
+// Authentification automatique par téléphone
+$routes->get('login', 'Auth::login');
+$routes->post('auth/authenticate', 'Auth::authenticate');
+$routes->get('logout', 'Auth::logout');
+
+// Page d'accueil = Login (client)
+$routes->get('/', 'Auth::login');
+
+// Espace client (après connexion)
+$routes->group('client', function ($routes) {
+    $routes->get('/',              'Client::index');
+    $routes->post('deposit',       'Client::deposit');
+    $routes->post('withdrawal',    'Client::withdrawal');
+    $routes->post('transfer',      'Client::transfer');
+    $routes->get('history',        'Client::history');
+    $routes->get('balance',        'Client::balance');
+});
+
+// Dashboard admin/opérateur
+$routes->get('log_admin', 'Home::index');
 
 // Gestion des opérateurs (Configuration des préfixes)
 $routes->group('operators', function ($routes) {

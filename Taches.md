@@ -25,12 +25,12 @@
 
 | # | Tâche                                                            | Responsable | Statut |
 |---|------------------------------------------------------------------|-------------|--------|
-| 1 | Login automatique avec le numéro de téléphone (sans inscription) |   Jordie    |  [ ]   |
-| 2 | Consultation du solde                                            |   Jordie    |  [ ]   |
-| 3 | Faire un dépôt (automatique)                                     |   Jordie    |  [ ]   |
-| 4 | Faire un retrait (automatique)                                   |   Jordie    |  [ ]   |
-| 5 | Faire un transfert                                               |   Jordie    |  [ ]   |
-| 6 | Voir l'historique des opérations                                 |   Jordie    |  [ ]   |
+| 1 | Login automatique avec le numéro de téléphone (sans inscription) |   Jordie    |  [X]   |
+| 2 | Consultation du solde                                            |   Jordie    |  [X]   |
+| 3 | Faire un dépôt (automatique)                                     |   Jordie    |  [X]   |
+| 4 | Faire un retrait (automatique)                                   |   Jordie    |  [X]   |
+| 5 | Faire un transfert                                               |   Jordie    |  [X]   |
+| 6 | Voir l'historique des opérations                                 |   Jordie    |  [X]   |
 
 ### Base de données
 
