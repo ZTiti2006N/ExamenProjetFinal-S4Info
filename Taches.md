@@ -15,7 +15,7 @@
 
 | # | Tâche                                                       | Responsable | Statut|
 |---|-------------------------------------------------------------|-------------|-------|
-| 1 | Configuration des préfixes valables (ex: 033 et 037)        |   Tiavina   |  [ ]  |
+| 1 | Configuration des préfixes valables (ex: 033 et 037)        |   Tiavina   |  [X]  |
 | 2 | Création des types d'opérations (dépôt, retrait, transfert) |   Tiavina   |  [ ]  |
 | 3 | Barèmes de frais par tranche de montant (modifiable)        |   Tiavina   |  [ ]  |
 | 4 | Situation des gains via les frais (retrait et transfert)    |   Tiavina   |  [ ]  |
