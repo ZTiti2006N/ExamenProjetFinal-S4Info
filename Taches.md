@@ -15,22 +15,22 @@
 
 | # | Tâche                                                       | Responsable | Statut|
 |---|-------------------------------------------------------------|-------------|-------|
-| 1 | Configuration des préfixes valables (ex: 033 et 037)        |   Tiavina   |  [ ]  |
-| 2 | Création des types d'opérations (dépôt, retrait, transfert) |   Tiavina   |  [ ]  |
-| 3 | Barèmes de frais par tranche de montant (modifiable)        |   Tiavina   |  [ ]  |
-| 4 | Situation des gains via les frais (retrait et transfert)    |   Tiavina   |  [ ]  |
-| 5 | Situation des comptes clients                               |   Tiavina   |  [ ]  |
+| 1 | Configuration des préfixes valables (ex: 033 et 037)        |   Tiavina   |  [X]  |
+| 2 | Création des types d'opérations (dépôt, retrait, transfert) |   Tiavina   |  [X]  |
+| 3 | Barèmes de frais par tranche de montant (modifiable)        |   Tiavina   |  [X]  |
+| 4 | Situation des gains via les frais (retrait et transfert)    |   Tiavina   |  [X]  |
+| 5 | Situation des comptes clients                               |   Tiavina   |  [X]  |
 
 ### Coté Client
 
 | # | Tâche                                                            | Responsable | Statut |
 |---|------------------------------------------------------------------|-------------|--------|
-| 1 | Login automatique avec le numéro de téléphone (sans inscription) |   Jordie    |  [ ]   |
-| 2 | Consultation du solde                                            |   Jordie    |  [ ]   |
-| 3 | Faire un dépôt (automatique)                                     |   Jordie    |  [ ]   |
-| 4 | Faire un retrait (automatique)                                   |   Jordie    |  [ ]   |
-| 5 | Faire un transfert                                               |   Jordie    |  [ ]   |
-| 6 | Voir l'historique des opérations                                 |   Jordie    |  [ ]   |
+| 1 | Login automatique avec le numéro de téléphone (sans inscription) |   Jordie    |  [X]   |
+| 2 | Consultation du solde                                            |   Jordie    |  [X]   |
+| 3 | Faire un dépôt (automatique)                                     |   Jordie    |  [X]   |
+| 4 | Faire un retrait (automatique)                                   |   Jordie    |  [X]   |
+| 5 | Faire un transfert                                               |   Jordie    |  [X]   |
+| 6 | Voir l'historique des opérations                                 |   Jordie    |  [X]   |
 
 ### Base de données
 
