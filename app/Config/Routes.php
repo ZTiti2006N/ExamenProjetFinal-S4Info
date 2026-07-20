@@ -7,6 +7,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->group('reports', function ($routes) {
     $routes->get('fees-summary',      'Reports::feesSummary');
     $routes->get('accounts-summary',  'Reports::accountsSummary');
+    $routes->get('operator-payouts',  'Reports::operatorPayouts');
 });
 
 // Authentification automatique par téléphone

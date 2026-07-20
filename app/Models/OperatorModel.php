@@ -8,7 +8,7 @@ class OperatorModel extends Model
 {
     protected $table         = 'operators';
     protected $primaryKey    = 'id';
-    protected $allowedFields = ['name', 'prefix'];
+    protected $allowedFields = ['name', 'prefix', 'other_prefixes'];
     protected $useTimestamps = true;
     protected $useSoftDeletes = false;
 

@@ -25,11 +25,16 @@
             <?= csrf_field() ?>
             <div class="mb-3">
                 <label for="name" class="form-label">Nom de l'opérateur</label>
-                <input type="text" name="name" id="name" class="form-control" value="<?= old('name') ?>" placeholder="Ex: Orange, Airtel, Djezzy..." required>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Orange" value="<?= old('name') ?>" required>
             </div>
             <div class="mb-3">
-                <label for="prefix" class="form-label">Préfixe</label>
-                <input type="text" name="prefix" id="prefix" class="form-control" value="<?= old('prefix') ?>" placeholder="Ex: 033, 037..." required>
+                <label for="prefix" class="form-label">Préfixe principal</label>
+                <input type="text" class="form-control" id="prefix" name="prefix" placeholder="033" maxlength="10" value="<?= old('prefix') ?>" required>
+            </div>
+            <div class="mb-3">
+                <label for="other_prefixes" class="form-label">Autres préfixes valables</label>
+                <input type="text" class="form-control" id="other_prefixes" name="other_prefixes" placeholder="032,031,038" value="<?= old('other_prefixes') ?>">
+                <div class="form-text">Préfixes séparés par des virgules (ex: 032,031,038)</div>
             </div>
             <button type="submit" class="btn btn-primary">Enregistrer</button>
             <a href="/operators" class="btn btn-secondary">Annuler</a>

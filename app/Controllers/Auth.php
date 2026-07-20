@@ -30,10 +30,22 @@ class Auth extends BaseController
             return redirect()->back()->withInput()->with('error', 'Le numéro de téléphone doit contenir exactement 10 chiffres.');
         }
 
-        // Vérifier le préfixe (3 premiers chiffres)
+        // Vérifier le préfixe (3 premiers chiffres) - inclut les préfixes additionnels
         $prefix = substr($phone, 0, 3);
         $opModel = new OperatorModel();
         $operator = $opModel->where('prefix', $prefix)->first();
+
+        // Si pas trouvé avec le préfixe principal, vérifier dans other_prefixes
+        if (!$operator) {
+            $allOperators = $opModel->findAll();
+            foreach ($allOperators as $op) {
+                $otherPrefixes = array_map('trim', explode(',', $op['other_prefixes'] ?? ''));
+                if (in_array($prefix, $otherPrefixes)) {
+                    $operator = $op;
+                    break;
+                }
+            }
+        }
 
         if (! $operator) {
             return redirect()->back()->withInput()->with('error', 'Aucun opérateur trouvé pour le préfixe "' . $prefix . '". Veuillez vérifier votre numéro.');
