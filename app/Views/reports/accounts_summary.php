@@ -16,8 +16,8 @@
         <?php endif; ?>
 
         <div class="mb-3">
-            <a href="/" class="btn btn-outline-secondary">← Accueil</a>
-            <a href="/reports/fees-summary" class="btn btn-outline-info">Situation des gains via les frais</a>
+            <a href="/" class="btn btn-outline-primary"><i class="fas fa-home"></i> Accueil</a>
+            <a href="/reports/fees-summary" class="btn btn-outline-info"><i class="fas fa-coins"></i> Situation des gains via les frais</a>
         </div>
 
         <table class="table table-bordered table-striped">
