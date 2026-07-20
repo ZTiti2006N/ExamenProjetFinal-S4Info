@@ -131,7 +131,5 @@ _modules/*
 /results/
 /phpunit.xml
 
-# Fichiers locaux (ne pas envoyer sur GitHub)
+# Fichier guide local (ne pas envoyer sur GitHub)
 guide.md
-base.sql
-Taches.md
