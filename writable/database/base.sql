@@ -45,6 +45,7 @@ CREATE TABLE IF NOT EXISTS accounts (
     id              INTEGER PRIMARY KEY AUTOINCREMENT,
     client_id       INTEGER NOT NULL UNIQUE,               -- Un seul compte par client
     balance         DECIMAL(15,2) NOT NULL DEFAULT 0.00,   -- Solde actuel
+    epargne_balance DECIMAL(15,2) NOT NULL DEFAULT 0.00,   -- Solde d'épargne
     created_at      DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at      DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (client_id) REFERENCES clients(id)
@@ -127,3 +128,4 @@ JOIN operators op ON c.operator_id = op.id
 JOIN accounts a ON c.id = a.client_id
 LEFT JOIN operations o ON c.id = o.client_id AND o.status = 'completed'
 GROUP BY c.id;
+

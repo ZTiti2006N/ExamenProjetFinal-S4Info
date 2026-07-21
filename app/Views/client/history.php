@@ -231,6 +231,7 @@ i<!DOCTYPE html>
                                     <th>Solde avant</th>
                                     <th>Solde après</th>
                                     <th>Statut</th>
+                                    <th>Epargne</th>
                                 </tr>
                             </thead>
                             <tbody>

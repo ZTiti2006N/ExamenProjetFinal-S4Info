@@ -176,4 +176,6 @@ class OperationTypes extends BaseController
 
         return view('operation_types/detail', $data);
     }
+
+    
 }

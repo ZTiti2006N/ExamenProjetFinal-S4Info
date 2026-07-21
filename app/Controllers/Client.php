@@ -127,6 +127,8 @@ class Client extends BaseController
             $db->close();
             return redirect()->back()->with('error', 'Erreur lors du dépôt : ' . $e->getMessage());
         }
+
+
     }
 
     // ===== RETRAIT (avec option inclure frais) =====
@@ -215,6 +217,26 @@ class Client extends BaseController
             return redirect()->back()->with('error', 'Erreur lors du retrait : ' . $e->getMessage());
         }
     }
+    
+    public function epargne()
+    {
+        $redirect = $this->checkAuth();
+        if ($redirect) return $redirect;
+
+        $db = db_connect();
+        $clientId = session()->get('client_id');
+
+        $epargneBalance = 0;
+        try {
+            $epargneBalance = (float)$db->query("SELECT epargne_balance FROM accounts WHERE client_id = $clientId")->getRow()->epargne_balance;
+        } catch (\Exception $e) { $epargneBalance = 0; }
+
+        $db->close();
+
+        return $this->response->setJSON(['epargne_balance' => $epargneBalance]);
+      
+        }
+
 
     // ===== TRANSFERT MULTIPLE =====
     public function transfer()
@@ -383,3 +405,4 @@ class Client extends BaseController
         return view('client/history', $data);
     }
 }
+

@@ -74,9 +74,14 @@
 
 ---
 
-## Version v3
-<!-- À compléter -->
+## Alea2
+Tag 4203
 
-| Tâche | Responsable | Statut |
-|-------|-------------|--------|
-|       |   Tiavina   |        |
+| Tâche | Responsable | 
+|-------|-------------|
+|       |   Tiavina   |
+
+# Optionnalité d'épargne pour le client
+Epargne pour configuré par le client de l'opérateur, 
+Avec un montant minimum et maximum, et un taux d'intérêt. Le client peut consulter son épargne, 
+faire un dépôt ou un retrait de son épargne, et voir l'historique de ses opérations d'épargne.

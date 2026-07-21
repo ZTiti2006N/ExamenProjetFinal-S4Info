@@ -248,6 +248,16 @@
                             </button>
                         </div>
                     </div>
+                    <div class="col-md-4">
+                        <div class="action-card">
+                            <div class="action-icon" style="background:#dbeafe;color:#2563eb;"><i class="fas fa-users"></i></div>
+                            <h6>Épargne</h6>
+                            <p>Investir votre argent pour obtenir des intérêts</p>
+                            <button class="btn-action btn-savings" data-bs-toggle="modal" data-bs-target="#savingsModal">
+                                <i class="fas fa-piggy-bank me-1"></i> Gérer mon épargne
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="row">
@@ -322,6 +332,12 @@
         </div>
     </div>
 
+    <!--MODAL EPARGNE (a prendre ou valider à partir du solde actuelle) -->
+<h5>Faire une parge </h5>
+<Label>Epargne actuelle</Label>
+<span>Ar</span>
+
+
     <!-- MODAL RETRAIT (avec option inclure frais) -->
     <div class="modal fade" id="withdrawalModal" tabindex="-1">
         <div class="modal-dialog">
@@ -361,6 +377,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- MODAL TRANSFERT MULTIPLE -->
     <div class="modal fade" id="transferModal" tabindex="-1">
