@@ -127,3 +127,15 @@ JOIN operators op ON c.operator_id = op.id
 JOIN accounts a ON c.id = a.client_id
 LEFT JOIN operations o ON c.id = o.client_id AND o.status = 'completed'
 GROUP BY c.id;
+
+CREATE TABLE promotion-frais(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    operation_type_id INTEGER NOT NULL,
+    min_amount DECIMAL(15,2) NOT NULL,
+    max_amount DECIMAL(15,2) NOT NULL,
+    fee_fixed DECIMAL(15,2) NOT NULL DEFAULT 0.00,
+    fee_percentage DECIMAL(5,2) NOT NULL DEFAULT 0.00,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (operation_type_id) REFERENCES operation_types(id)
+);

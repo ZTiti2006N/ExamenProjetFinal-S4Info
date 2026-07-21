@@ -94,4 +94,16 @@ class Auth extends BaseController
         session()->destroy();
         return redirect()->to('/');
     }
+    public function promotion()
+    {
+      if $client = session()->get('client_id')
+      {
+          // Logique pour afficher la promotion pour le client connecté
+          return view('auth/promotion');
+      } else {
+        return redirect()->to('/login')->with('error', 'Veuillez vous connecter pour voir les promotions.');   
+      }   
+    }
+    
+
 }
